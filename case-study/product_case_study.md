@@ -150,3 +150,8 @@ The highest-impact product decision is to improve view-to-cart conversion before
 
 In parallel, build a cart abandoner recovery path, but do not let checkout work distract from the larger activation gap. For retention and experimentation, request a longer event window before making roadmap-level decisions.
 
+## 11. Strategic Takeaway
+
+The product’s primary constraint is not conversion efficiency at checkout, but the failure to convert browsing into intent.
+
+This suggests that the next phase of growth should focus on improving product discovery, trust signals, and merchandising clarity, rather than scaling acquisition or optimizing late-stage conversion.
