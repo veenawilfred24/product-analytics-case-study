@@ -1,6 +1,7 @@
 # Improving User Growth and Retention Using Product Analytics
 
-Product analytics case study using a real e-commerce event dataset with product views, cart events, and purchases.
+Product analytics case study using a real e-commerce event dataset with product views, cart events, and purchases. 
+The key insight: conversion failure occurs before intent formation, not during checkout, making early funnel optimization the highest-leverage growth opportunity.
 
 ![Executive KPI snapshot](dashboard/assets/executive_overview.png)
 
@@ -35,6 +36,12 @@ The product team wants to understand:
 | Purchase revenue | $164,058.23 |
 | A/B simulation p-value | 0.621 |
 
+## Interpretation
+
+- The primary bottleneck is early funnel activation, not checkout efficiency.  
+- Conversion improves significantly after cart (48.48%), meaning users who show intent are likely to complete purchase.  
+- The largest opportunity lies in converting browsing behavior into purchase intent, not optimizing late-stage checkout.  
+
 ## Dashboard Preview
 
 ![Funnel chart](dashboard/assets/funnel_chart.png)
@@ -48,17 +55,17 @@ The product team wants to understand:
 ## Insights
 
 - **View-to-cart is the largest bottleneck.** 97.18% of viewed users do not add to cart, so the first product priority should be improving product discovery and product detail pages.
-- **Checkout is not perfect, but it is not the first constraint.** 48.48% of cart users purchase, which is much stronger than the view-to-cart step.
+- **Checkout is not the primary constraint.** Conversion after cart (48.48%) is significantly stronger, indicating that users who show intent are likely to complete purchase.
 - **Electronics is the strongest category.** It delivers 2.67% ordered view-to-purchase conversion and $121,229.39 in revenue.
 - **Uncategorized products create a decision-quality problem.** 17,028 rows were missing category code, and uncategorized conversion is only 0.33%.
 - **Browsers dominate the user base.** 94.17% of users viewed but did not cart or purchase.
-- **The A/B simulation does not justify shipping Variant B.** Variant B conversion is slightly higher, but p=0.621, so the result is not statistically significant.
+- **The A/B simulation does not justify shipping Variant B.** Variant B shows a slight uplift, but p = 0.621 indicates the result is not statistically significant. This highlights the importance of disciplined experimentation — product decisions should not be based on directional improvements alone.
 
 Full findings: [insights/key_findings.md](insights/key_findings.md)
 
 ## Final Recommendation
 
-Prioritize improving **view-to-cart conversion** before scaling acquisition or over-investing in checkout-only work. The product team should focus on product detail page clarity, category taxonomy, recommendations, pricing confidence, delivery/returns messaging, and stronger cart calls to action.
+The highest-impact product decision is to improve **view-to-cart conversion** before investing in checkout optimization or acquisition. The product team should focus on product detail page clarity, category taxonomy, recommendations, pricing confidence, delivery/returns messaging, and stronger cart calls to action.
 
 Use electronics as the benchmark category and fix uncategorized taxonomy before making merchandising decisions from category reporting. Request a longer event window before making retention or lifecycle roadmap decisions.
 
