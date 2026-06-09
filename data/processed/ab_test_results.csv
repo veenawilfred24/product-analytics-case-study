@@ -1,0 +1,8 @@
+metric,value
+control_conversion_rate,0.04258137774413323
+treatment_conversion_rate,0.04454597372929754
+absolute_lift,0.0019645959851643108
+relative_lift,0.046137445269369914
+z_score,0.4939958805148937
+p_value,0.6213090888066548
+significant_at_05,False

@@ -1,0 +1,2 @@
+cohort_date,cohort_users,day_1_retained_users,day_7_retained_users,repeat_session_users,active_30m_later_users,day_1_retention,day_7_retention,same_window_repeat_session_rate,active_30m_later_rate
+2019-11-01,10537,0,0,1299,415,0.0,0.0,0.12327987093100504,0.039385024200436554

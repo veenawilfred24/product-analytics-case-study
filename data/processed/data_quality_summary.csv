@@ -1,0 +1,11 @@
+metric,value
+raw_rows,49999
+duplicate_rows_removed,14
+clean_rows,49985
+users,10537
+sessions,12436
+products,13570
+missing_category_rows_filled,17028
+missing_brand_rows_filled,8099
+min_event_time,2019-11-01T00:00:00+00:00
+max_event_time,2019-11-01T02:48:26+00:00

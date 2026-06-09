@@ -1,0 +1,4 @@
+segment,users,sessions,views,carts,purchases,revenue,user_share,revenue_share
+Browsers,9923,11613,45026,0,0,0.0,0.9417291449179084,0.0
+High-value users (purchasers),459,623,2932,246,568,164058.23,0.04356078580241055,1.0
+Cart abandoners,155,202,1000,213,0,0.0,0.014710069279681123,0.0
