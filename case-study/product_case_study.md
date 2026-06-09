@@ -2,9 +2,11 @@
 
 ## 1. Executive Summary
 
-The dataset shows a classic e-commerce activation problem. Users are arriving and viewing products, but very few are moving from product view to cart. After cleaning 49,985 events, the ordered funnel shows 10,535 viewed users, 297 users who carted after viewing, and 144 users who purchased after carting.
+The dataset reveals a classic e-commerce activation problem. Users are arriving and viewing products, but very few are progressing to cart. After cleaning 49,985 events, the ordered funnel shows 10,535 viewed users, 297 users who carted after viewing, and 144 users who purchased after carting.
 
-The largest measured drop-off is view to cart: **97.18%** of viewed users never add to cart. Checkout still loses intent, but cart-to-purchase conversion is materially stronger at **48.48%**. The first product priority should therefore be improving product discovery and product detail page confidence, not only checkout recovery.
+The largest drop-off occurs between view and cart: **97.18%** of users fail to translate product views into purchase intent. In contrast, cart-to-purchase conversion is relatively strong at **48.48%**, indicating that once users demonstrate intent, they are likely to complete the transaction.
+
+The key insight is that conversion failure occurs before intent formation, not during checkout, making early funnel optimization the highest-leverage growth opportunity.
 
 ## 2. Business Problem
 
@@ -16,7 +18,7 @@ The product team needs to understand why e-commerce traffic is not converting in
 - Retention and lifecycle programs
 - Experimentation around onboarding or shopping guidance
 
-The analysis focuses on business decisions, not reporting volume for its own sake.
+This analysis focuses on identifying the primary constraint in the user journey and recommending the highest-impact product actions.
 
 ## 3. Dataset
 
@@ -57,7 +59,7 @@ Supporting metrics:
 - Category-level conversion
 - Revenue per purchaser: approximately **$357.42**
 
-These metrics tell Product whether the constraint is product activation, checkout, retention, or category quality.
+These metrics help identify whether the primary constraint lies in product activation, checkout efficiency, retention, or merchandising quality.
 
 ## 5. Funnel Analysis
 
@@ -74,7 +76,7 @@ Results:
 - Cart-to-purchase rate: **48.48%**
 - View-to-purchase rate: **1.37%**
 
-The biggest loss is before cart. That points to weak product activation: users are seeing products but not finding enough value, trust, urgency, or fit to take the next step.
+The magnitude of the drop-off indicates that users are not failing at checkout — they are failing to form purchase intent in the first place. This reframes the problem from checkout optimization to product discovery and value communication.
 
 Category results strengthen that interpretation. Electronics is the standout category, with **2.67%** ordered view-to-purchase conversion and **$121,229.39** in revenue. Uncategorized products have **4,254 viewed users** but only **0.33%** ordered conversion, which makes taxonomy quality a product analytics issue and a merchandising issue.
 
@@ -88,6 +90,7 @@ The requested Day 1 and Day 7 retention cohorts were created, but the dataset on
 - Active 30 minutes later: **3.94%**
 
 The honest product conclusion is that long-term retention cannot be evaluated from this extract. The available signal says some users do return within the same short window, but lifecycle decisions need a longer multi-day dataset.
+Any attempt to derive lifecycle insights would risk overfitting to incomplete behavioral signals.
 
 ## 7. Segmentation
 
@@ -97,6 +100,8 @@ Users were segmented into mutually exclusive behavior groups:
 - **High-value users (purchasers):** 459 users, **4.36%** of users, generating **$164,058.23** in purchase revenue.
 - **Cart abandoners:** 155 users, **1.47%** of users. They carted but did not purchase.
 - **Inactive users:** none observed because every user in the dataset has at least one event.
+
+The distribution shows that growth depends more on activating browsers than optimizing already engaged users, as the largest population sits at the top of the funnel.
 
 Business actions:
 
@@ -124,6 +129,8 @@ Results:
 - Relative lift: **4.61%**
 - P-value: **0.621**
 
+The lack of statistical significance reinforces the importance of disciplined experimentation; product changes should not be shipped based on directional improvements alone.
+
 Decision: **Do not ship based on this result.** The observed difference is not statistically significant and should be treated as noise. A real experiment should run over a longer window with pre-registered sample size and guardrails for revenue per purchaser and cart-to-purchase conversion.
 
 ## 9. Key Insights
@@ -139,7 +146,7 @@ Decision: **Do not ship based on this result.** The observed difference is not s
 
 ## 10. Final Recommendation
 
-Focus the next product sprint on increasing view-to-cart conversion. Start with electronics as the positive benchmark and uncategorized products as the cleanup priority. Improve category taxonomy, product detail page clarity, delivery/returns confidence, recommendations, and cart calls to action.
+The highest-impact product decision is to improve view-to-cart conversion before investing in checkout optimization or acquisition. Start with electronics as the positive benchmark and uncategorized products as the cleanup priority. Improve category taxonomy, product detail page clarity, delivery/returns confidence, recommendations, and cart calls to action.
 
 In parallel, build a cart abandoner recovery path, but do not let checkout work distract from the larger activation gap. For retention and experimentation, request a longer event window before making roadmap-level decisions.
 
